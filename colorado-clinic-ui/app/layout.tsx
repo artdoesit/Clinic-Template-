@@ -1,17 +1,12 @@
-import { Plus_Jakarta_Sans } from 'next/font/google';
-import './globals.css';
-
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
-
-export const metadata = {
-  title: 'Colorado Clinic UI',
-  description: 'Spatial UI Design',
-};
-
-export default function RootLayout({children}) {
+// app/layout.tsx
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={jakarta.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
